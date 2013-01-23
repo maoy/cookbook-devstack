@@ -17,6 +17,8 @@
 # limitations under the License.
 #
 
+include_recipe "git"
+
 git_repo = node["devstack"]["git_repo"]
 
 git "#{git_repo}" do

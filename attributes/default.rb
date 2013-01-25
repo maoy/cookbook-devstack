@@ -18,7 +18,9 @@
 #
 
 # Directory for git clone
-default["devstack"]["git_repo"] = "/root/devstack"
+default["devstack"]["git_repo"] = "/home/ubuntu/devstack"
+default["devstack"]["user"] = "ubuntu"
+default["devstack"]["group"] = "ubuntu"
 
 # Variables used in devstack/localrc
 default["devstack"]["dest"] = "/opt/stack"

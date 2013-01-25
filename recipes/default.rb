@@ -24,9 +24,13 @@ git_repo = node["devstack"]["git_repo"]
 git "#{git_repo}" do
   repository "https://github.com/openstack-dev/devstack.git"
   reference "master"
+  user node["devstack"]["user"]
+  group node["devstack"]["group"]
   action :checkout
 end
 
 template "#{git_repo}/localrc" do
   source "localrc.erb"
+  user node["devstack"]["user"]
+  group node["devstack"]["group"]
 end
